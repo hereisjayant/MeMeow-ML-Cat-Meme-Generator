@@ -56,12 +56,12 @@ that allows everyone to work in pairs on the four components :
    
 ### Milestones
 
-Milestone 1 : Getting decent results for the Image classifier + Creating a basic app using
-kivy
-Milestone 2 : Getting decent results for the Text Classifier and generating meme output
+- Milestone 1 : Getting decent results for the Image classifier + Creating a basic app using
+Android Studio
+- Milestone 2 : Getting decent results for the Text Classifier and generating meme output
 from input
-Milestone 3 : Getting somewhat functional user interface
-Milestone 4 : The complete project
+- Milestone 3 : Getting somewhat functional user interface
+- Milestone 4 : The complete project
 
 ### Risks / Backup
 
