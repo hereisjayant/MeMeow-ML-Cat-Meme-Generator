@@ -18,7 +18,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Cats" >
-        <activity android:name="com.example.cats.SelectImgSrc" />
+        <activity android:name="com.example.cats.memeFromImage" />
+        <activity android:name="com.example.cats.imageUpload" />
+        <activity android:name="com.example.cats.calledFromMkFromTxt" />
+        <activity android:name="com.example.cats.ImEnteringActivity" />
         <activity android:name="com.example.cats.TextEnteringActivity" />
         <activity android:name="com.example.cats.MainActivity" >
             <intent-filter>
