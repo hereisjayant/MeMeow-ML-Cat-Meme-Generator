@@ -16,7 +16,8 @@ The integration of our PyTorch models with the app remains a challenge. We plan 
 For Milestone 3, we plan to work on the integration of ML models with the app and general fine tuning of the app. Improving aesthetics would be a large part of what we do in the last two weeks.
 
 ## Work Distribution
-Christy: Worked on collecting 20 images for the app’s dataset, generated 10 captions for the “happy” emotion. Collaborated with Jayant on the text classification task. Fixed errors and made optimizations on image classification.
-Fariha: Worked on collecting 20 images for the app’s dataset, collaborated with Savitoj on the app development, and generated 10 captions for the ‘Sleepy’ emotion
-Jayant: Worked on collecting 20 images for the app’s dataset, generated 10 captions for the “sad” emotion. Collaborated with Christy on the text classification task.
-Savitoj: Worked on collecting 20 images for the app’s dataset, collaborated with Fariha on the app development, and generated 10 captions for the ‘ANGRY’ emotion.
+
+-Christy: Worked on collecting 20 images for the app’s dataset, generated 10 captions for the “happy” emotion. Collaborated with Jayant on the text classification task. Fixed errors and made optimizations on image classification.
+-Fariha: Worked on collecting 20 images for the app’s dataset, collaborated with Savitoj on the app development, and generated 10 captions for the ‘Sleepy’ emotion
+-Jayant: Worked on collecting 20 images for the app’s dataset, generated 10 captions for the “sad” emotion. Collaborated with Christy on the text classification task.
+-Savitoj: Worked on collecting 20 images for the app’s dataset, collaborated with Fariha on the app development, and generated 10 captions for the ‘ANGRY’ emotion.
