@@ -1,4 +1,7 @@
-#Thu Apr 08 03:40:46 IST 2021
-base.0=C\:\\Users\\User\\AndroidStudioProjects\\Cats\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Fri Apr 30 15:01:50 IST 2021
+base.0=C\:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=C\:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
