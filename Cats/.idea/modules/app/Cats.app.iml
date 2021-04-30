@@ -94,5 +94,8 @@
     <orderEntry type="library" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.pytorch:pytorch_android:1.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.pytorch:pytorch_android_fbjni:1.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.pytorch:pytorch_android_torchvision:1.4.0@aar" level="project" />
   </component>
 </module>
