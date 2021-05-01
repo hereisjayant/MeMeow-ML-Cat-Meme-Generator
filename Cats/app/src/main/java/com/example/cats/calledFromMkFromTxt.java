@@ -20,6 +20,8 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         {
             txt.setText(bundle.getString("MEME-TXT"));
         }
+
+        // pass MEME-TXT to the model
         String emotion = "sleepy";
         Random random = new Random();
         int index = random.nextInt(20);
