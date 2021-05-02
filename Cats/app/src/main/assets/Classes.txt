@@ -1,0 +1,7 @@
+Mapping:
+
+0.   sad
+1.   anger
+2.   fear
+3.   happy
+
