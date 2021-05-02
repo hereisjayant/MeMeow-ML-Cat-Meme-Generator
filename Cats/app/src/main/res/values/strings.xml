@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Meow Meme Generator</string>
+    <string name="app_name">meMeow</string>
     <string name="memetxt">Filler</string>
+    <string name="img_id">2</string>
 </resources>

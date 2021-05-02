@@ -2,6 +2,8 @@ package com.example.cats;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,9 +17,10 @@ public class memeFromImage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meme_from_image);
         Bundle bundle = getIntent().getExtras();
-        int id = -1;
-        id = bundle.getInt("IMG-ID");
+        byte[] byteArray = bundle.getByteArray("ByteArray");
+        Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+
         ImageView imageView = findViewById(R.id.meme_image);
-        imageView.setImageResource(id);
+        imageView.setImageBitmap(bitmap);
     }
 }
