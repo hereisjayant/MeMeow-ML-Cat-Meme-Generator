@@ -3,11 +3,15 @@ package com.example.cats;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import java.io.ByteArrayOutputStream;
 
 public class imageUpload extends AppCompatActivity {
     /**
@@ -46,8 +50,13 @@ public class imageUpload extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int imgId = IVPreviewImage.getId();
+                IVPreviewImage.buildDrawingCache();
+                Bitmap bitmap = IVPreviewImage.getDrawingCache();
+                ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG,50, bs);
                 Intent intent = new Intent(getApplicationContext(),memeFromImage.class);
                 intent.putExtra("IMG-ID",imgId);
+                intent.putExtra("ByteArray",bs.toByteArray());
                 startActivity(intent);
             }
         });
