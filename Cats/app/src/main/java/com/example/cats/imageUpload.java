@@ -88,7 +88,7 @@ public class imageUpload extends AppCompatActivity {
         // the image chooser function
         BSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { imageChooser(); }
+            public void onClick(View v) { imageChooser(); textView.setText("line 91"); }
         });
 
         Button memeBtn = (Button) findViewById(R.id.memeBtn);
@@ -101,6 +101,7 @@ public class imageUpload extends AppCompatActivity {
                 bitmap = IVPreviewImage.getDrawingCache();
                 ByteArrayOutputStream bs = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.JPEG,50, bs);
+                Bitmap bitmap2 = Bitmap.createScaledBitmap(bitmap,224,224,true);
 
                 textView.setTextSize(25);
                 textView.setText("line 74");
@@ -119,11 +120,12 @@ public class imageUpload extends AppCompatActivity {
 
                 textView.setText("line 93");
 
-                final Tensor inputTensor = TensorImageUtils.bitmapToFloat32Tensor
-                        (bitmap, TensorImageUtils.TORCHVISION_NORM_MEAN_RGB, TensorImageUtils.TORCHVISION_NORM_STD_RGB);
-                final Tensor outputTensor = module.forward(IValue.from(inputTensor)).toTensor();
-                final float[] scores = outputTensor.getDataAsFloatArray();
-                Float maxScore = - Float.MAX_VALUE;
+                Tensor inputTensor = TensorImageUtils.bitmapToFloat32Tensor
+                        (bitmap2, TensorImageUtils.TORCHVISION_NORM_MEAN_RGB, TensorImageUtils.TORCHVISION_NORM_STD_RGB);
+                System.out.println(inputTensor.shape()[0] + ", " + inputTensor.shape()[1]+ ", "+ inputTensor.shape()[2]+ ", " +inputTensor.shape()[3]);
+                Tensor outputTensor = module.forward(IValue.from(inputTensor)).toTensor();
+                float[] scores = outputTensor.getDataAsFloatArray();
+                float maxScore = - Float.MAX_VALUE;
                 int maxScoreIdx = -1;
                 for (int j = 0; j < 4; j++) {
                     if (scores[j] > maxScore) {
@@ -137,14 +139,14 @@ public class imageUpload extends AppCompatActivity {
 //                textView.setText(String.valueOf(maxScoreIdx));
                 String className = classes[maxScoreIdx];
 
-                textView.setText(className);
+                textView.setText(className );
 
 //        https://stackoverflow.com/questions/8748444/passing-strings-between-activities-in-android
                 Intent intent = new Intent(getApplicationContext(),memeFromImage.class);
                 intent.putExtra("IMG-ID",imgId);
                 intent.putExtra("ByteArray",bs.toByteArray());
                 intent.putExtra("CLASS_NAME",className);
-                startActivity(intent);
+                //startActivity(intent);
             }
 
         });
