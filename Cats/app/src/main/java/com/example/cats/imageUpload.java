@@ -53,10 +53,8 @@ public class imageUpload extends AppCompatActivity {
 
     // One Button
     Button BSelectImage;
-
     // One Preview Image
     ImageView IVPreviewImage;
-
     TextView textView;
 
     // constant to compare
@@ -72,23 +70,23 @@ public class imageUpload extends AppCompatActivity {
         IVPreviewImage = findViewById(R.id.IVPreviewImage);
         textView = findViewById(R.id.category);
 
-
-
+        // loading the image model
+        System.out.println("before loading");
         try {
-            // kitten.jpg should be changed to selectedImageUri
-            module = Module.load(assetFilePath(this, "image_model.pt"));
-            textView.setText("module");
+            module = Module.load(assetFilePath(this, "cpu_model.pt"));
         }catch(IOException e){
-            Log.e("PTRTDryRun", "Error reading assets", e);
-            textView.setText("rip module");
+            System.out.println("***Model couldn't be loaded***");
             finish();
         }
+        System.out.println("Model loaded");
 
         // handle the Choose Image button to trigger
         // the image chooser function
         BSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { imageChooser(); textView.setText("line 91"); }
+            public void onClick(View v) {
+                imageChooser();
+                System.out.println("Image chooser");; }
         });
 
         Button memeBtn = (Button) findViewById(R.id.memeBtn);
@@ -104,10 +102,6 @@ public class imageUpload extends AppCompatActivity {
                 Bitmap bitmap2 = Bitmap.createScaledBitmap(bitmap,224,224,true);
 
                 textView.setTextSize(25);
-                textView.setText("line 74");
-
-                textView.setText("line 81");
-
 //                try {
 //                    // kitten.jpg should be changed to selectedImageUri
 //                    bitmap = BitmapFactory.decodeStream(getAssets().open("kitten.jpg"));
@@ -118,28 +112,36 @@ public class imageUpload extends AppCompatActivity {
 //                    finish();
 //                }
 
-                textView.setText("line 93");
-
                 Tensor inputTensor = TensorImageUtils.bitmapToFloat32Tensor
                         (bitmap2, TensorImageUtils.TORCHVISION_NORM_MEAN_RGB, TensorImageUtils.TORCHVISION_NORM_STD_RGB);
+                System.out.println("Input tensor shape: ");
                 System.out.println(inputTensor.shape()[0] + ", " + inputTensor.shape()[1]+ ", "+ inputTensor.shape()[2]+ ", " +inputTensor.shape()[3]);
                 Tensor outputTensor = module.forward(IValue.from(inputTensor)).toTensor();
+                System.out.println("Output tensor shape: ");
+                System.out.println(outputTensor.shape()[0] + ", " + outputTensor.shape()[1]);
+                // converting the tensor to float array
                 float[] scores = outputTensor.getDataAsFloatArray();
-                float maxScore = - Float.MAX_VALUE;
+                // printing out the output scores
+                System.out.println("these are the output scores: "+ scores.length);
+                for(float score: scores){
+                    System.out.println(score);
+                }
+
+                //getting the max score index:
+                float maxScore = -Float.MAX_VALUE;
                 int maxScoreIdx = -1;
-                for (int j = 0; j < 4; j++) {
+                for (int j = 0; j < scores.length; j++) {
                     if (scores[j] > maxScore) {
                         maxScore = scores[j];
                         maxScoreIdx = j;
                     }
                 }
-                textView.setText("line 108");
+                System.out.println("line 108");
 
                 String classes[] = new String[] {"angry", "happy", "sad", "sleepy"};
-//                textView.setText(String.valueOf(maxScoreIdx));
                 String className = classes[maxScoreIdx];
-
-                textView.setText(className );
+                textView.setText("Image matches: " + className);
+                System.out.println("Image matches: " + className);
 
 //        https://stackoverflow.com/questions/8748444/passing-strings-between-activities-in-android
                 Intent intent = new Intent(getApplicationContext(),memeFromImage.class);
