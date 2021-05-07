@@ -2,4 +2,5 @@
     <string name="app_name">meMeow</string>
     <string name="memetxt">Filler</string>
     <string name="img_id">2</string>
+    <string name="save">SAVE</string>
 </resources>

@@ -8,11 +8,15 @@
 
     <ImageView
         android:id="@+id/meme_image"
-        android:layout_width="408dp"
-        android:layout_height="230dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
         android:layout_centerInParent="true"
         android:src="@drawable/wp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -20,17 +24,29 @@
         android:layout_width="407dp"
         android:layout_height="22dp"
         android:background="@color/white"
-        android:textAlignment="center"
         android:text="@string/memetxt"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#D64343"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/meme_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/save_meme_button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:icon="@drawable/baseline_save_black_18"
+        app:layout_constraintBottom_toTopOf="@+id/meme_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321" />
+        app:layout_constraintVertical_bias="0.088" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

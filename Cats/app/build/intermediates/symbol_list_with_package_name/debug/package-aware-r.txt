@@ -1647,6 +1647,7 @@ drawable angry8
 drawable angry9
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_save_black_18
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2095,6 +2096,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id save_meme_button
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2463,6 +2465,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string save
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
