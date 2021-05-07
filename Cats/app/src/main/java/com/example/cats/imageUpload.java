@@ -73,7 +73,7 @@ public class imageUpload extends AppCompatActivity {
         // loading the image model
         System.out.println("before loading");
         try {
-            module = Module.load(assetFilePath(this, "cpu_model.pt"));
+            module = Module.load(assetFilePath(this, "image_model.pt"));
         }catch(IOException e){
             System.out.println("***Model couldn't be loaded***");
             finish();
@@ -123,9 +123,9 @@ public class imageUpload extends AppCompatActivity {
                 float[] scores = outputTensor.getDataAsFloatArray();
                 // printing out the output scores
                 System.out.println("these are the output scores: "+ scores.length);
-                for(float score: scores){
-                    System.out.println(score);
-                }
+//                for(float score: scores){
+//                    System.out.println(score);
+//                }
 
                 //getting the max score index:
                 float maxScore = -Float.MAX_VALUE;

@@ -1656,6 +1656,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cat_icon
+drawable cat_icon2
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1690,6 +1692,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable image_icon_32pixels
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1700,6 +1703,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable memow_logo
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1723,6 +1727,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable pikachu
+drawable roundedbutton
 drawable sad0
 drawable sad1
 drawable sad10
@@ -1784,6 +1789,11 @@ drawable sleepy7
 drawable sleepy8
 drawable sleepy9
 drawable test_custom_background
+drawable text_icon
+drawable text_icon_32px
+drawable text_icon_colored
+drawable text_icon_colored_32px
+drawable text_logo16px
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable wp
@@ -1980,6 +1990,8 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
+id imageView4
 id info
 id inputEditText
 id invisible
@@ -2172,7 +2184,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
 id textView3
 id text_input_end_icon
