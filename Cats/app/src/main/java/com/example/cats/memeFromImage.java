@@ -97,22 +97,32 @@ public class memeFromImage extends AppCompatActivity {
         textView = findViewById(R.id.meme_txt);
 
         String name=bundle.getString("CLASS_NAME");
-        String[] strings;
-        if(name=="sleepy")
-            strings=captions_sleepy;
-        else if(name=="sad")
-            strings=captions_sad;
-        else if(name=="angry")
-            strings=captions_angry;
-        else
-            strings=captions_happy;
         Random random = new Random();
-        int index = random.nextInt(strings.length);
+        int index = random.nextInt(10);
 
         ImageView imageView = findViewById(R.id.meme_image);
         imageView.setImageBitmap(bitmap);
 
         textView.setTextSize(45);
-        textView.setText(strings[index]);
+        System.out.println("?"+name+"?");
+
+        if(name.equals("sleepy")){
+            System.out.println("!!!IS: " + name);
+            textView.setText(captions_sleepy[index]);
+        }
+        if(name.equals("sad")){
+            System.out.println("!!!IS: " + name);
+            textView.setText(captions_sad[index]);
+        }
+        if(name.equals("happy")){
+            System.out.println("!!!IS: " + name);
+            textView.setText(captions_happy[index]);
+        }
+        if(name.equals("angry")){
+            System.out.println("!!!IS: " + name);
+            textView.setText(captions_angry[index]);
+        }
+
+//        textView.setText(strings[index]);
     }
 }

@@ -73,7 +73,7 @@ public class imageUpload extends AppCompatActivity {
         // loading the image model
         System.out.println("before loading");
         try {
-            module = Module.load(assetFilePath(this, "image_model.pt"));
+            module = Module.load(assetFilePath(this, "cpu_model2.pt"));
         }catch(IOException e){
             System.out.println("***Model couldn't be loaded***");
             finish();
@@ -131,12 +131,13 @@ public class imageUpload extends AppCompatActivity {
                 float maxScore = -Float.MAX_VALUE;
                 int maxScoreIdx = -1;
                 for (int j = 0; j < scores.length; j++) {
+                    System.out.println(scores[j]);
                     if (scores[j] > maxScore) {
                         maxScore = scores[j];
                         maxScoreIdx = j;
                     }
                 }
-                System.out.println("line 108");
+                System.out.println("idx"+maxScoreIdx);
 
                 String classes[] = new String[] {"angry", "happy", "sad", "sleepy"};
                 String className = classes[maxScoreIdx];
@@ -148,7 +149,7 @@ public class imageUpload extends AppCompatActivity {
                 intent.putExtra("IMG-ID",imgId);
                 intent.putExtra("ByteArray",bs.toByteArray());
                 intent.putExtra("CLASS_NAME",className);
-                //startActivity(intent);
+                startActivity(intent);
             }
 
         });
