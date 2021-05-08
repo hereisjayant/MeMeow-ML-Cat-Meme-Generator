@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3C81A"
+    android:background="#0A0C19"
     tools:context=".TextEnteringActivity">
 
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="338dp"
         android:layout_height="72dp"
+        android:background="#009768"
+        android:backgroundTint="#9BBDB7"
         android:ems="10"
         android:hint="max characters: 45"
         android:inputType="textPersonName"
@@ -27,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:backgroundTint="#987878"
         android:capitalize="words"
         android:text="Create Meme"
         android:textSize="30sp"

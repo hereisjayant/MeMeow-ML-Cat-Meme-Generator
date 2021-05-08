@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3C81A"
+    android:background="#0A0C19"
     tools:context=".MainActivity"
     tools:ignore="HardcodedText">
 
@@ -17,9 +18,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
+        android:backgroundTint="#009678"
         android:text="SELECT IMAGE"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:iconTint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/IVPreviewImage"
@@ -29,7 +32,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="68dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#B19797" />
 
     <Button
         android:id="@+id/memeBtn"
@@ -39,14 +43,18 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="143dp"
         android:layout_marginLeft="143dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="149dp"
-        android:text="Make Meme" />
+        android:backgroundTint="#987878"
+        android:text="Make Meme"
+        app:iconTint="#3397F1" />
 
     <TextView
         android:id="@+id/category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:background="#F9F9FA"
+        android:text="TextView"
+        android:textColor="#0C0C0C" />
 
 </RelativeLayout>
