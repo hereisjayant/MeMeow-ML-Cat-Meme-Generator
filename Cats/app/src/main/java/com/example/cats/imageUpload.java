@@ -73,7 +73,7 @@ public class imageUpload extends AppCompatActivity {
         // loading the image model
         System.out.println("before loading");
         try {
-            module = Module.load(assetFilePath(this, "cpu_model2.pt"));
+            module = Module.load(assetFilePath(this, "cpu_model_9may130.pt"));
         }catch(IOException e){
             System.out.println("***Model couldn't be loaded***");
             finish();
@@ -111,9 +111,17 @@ public class imageUpload extends AppCompatActivity {
 //                    textView.setText("rip bitmap");
 //                    finish();
 //                }
-
                 Tensor inputTensor = TensorImageUtils.bitmapToFloat32Tensor
-                        (bitmap2, TensorImageUtils.TORCHVISION_NORM_MEAN_RGB, TensorImageUtils.TORCHVISION_NORM_STD_RGB);
+                        (bitmap2, new float[]{0.5f, 0.5f, 0.5f}, new float[]{0.5f, 0.5f, 0.5f});
+                System.out.println("Input tensor here: ");
+
+                float[] inputFloatArr = inputTensor.getDataAsFloatArray();
+
+//                for(float ele: inputFloatArr){
+//                    System.out.println(ele);
+//                }
+
+
                 System.out.println("Input tensor shape: ");
                 System.out.println(inputTensor.shape()[0] + ", " + inputTensor.shape()[1]+ ", "+ inputTensor.shape()[2]+ ", " +inputTensor.shape()[3]);
                 Tensor outputTensor = module.forward(IValue.from(inputTensor)).toTensor();
@@ -139,7 +147,7 @@ public class imageUpload extends AppCompatActivity {
                 }
                 System.out.println("idx"+maxScoreIdx);
 
-                String classes[] = new String[] {"angry", "happy", "sad", "sleepy"};
+                String classes[] = new String[] {"happy", "sad"};
                 String className = classes[maxScoreIdx];
                 textView.setText("Image matches: " + className);
                 System.out.println("Image matches: " + className);
