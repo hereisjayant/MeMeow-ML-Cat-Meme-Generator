@@ -1890,7 +1890,6 @@ id bounce
 id buttonPanel
 id cache_measures
 id cancel_button
-id category
 id center
 id center_horizontal
 id center_vertical

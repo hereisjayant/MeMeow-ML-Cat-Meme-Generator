@@ -68,7 +68,7 @@ public class imageUpload extends AppCompatActivity {
         // register the UI widgets with their appropriate IDs
         BSelectImage = findViewById(R.id.BSelectImage);
         IVPreviewImage = findViewById(R.id.IVPreviewImage);
-        textView = findViewById(R.id.category);
+        //textView = findViewById(R.id.category);
 
         // loading the image model
         System.out.println("before loading");
@@ -150,7 +150,7 @@ public class imageUpload extends AppCompatActivity {
 
                 String classes[] = new String[] {"happy", "sad"};
                 String className = classes[maxScoreIdx];
-                textView.setText("Image matches: " + className);
+                //textView.setText("Image matches: " + className);
                 System.out.println("Image matches: " + className);
 
 //        https://stackoverflow.com/questions/8748444/passing-strings-between-activities-in-android
