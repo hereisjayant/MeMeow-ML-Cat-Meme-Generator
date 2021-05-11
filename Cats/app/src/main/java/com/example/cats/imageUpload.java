@@ -102,7 +102,7 @@ public class imageUpload extends AppCompatActivity {
                 Bitmap bitmap2 = Bitmap.createScaledBitmap(bitmap,224,224,true);
                 IVPreviewImage.destroyDrawingCache();
 
-                textView.setTextSize(25);
+//                textView.setTextSize(25);
 //                try {
 //                    // kitten.jpg should be changed to selectedImageUri
 //                    bitmap = BitmapFactory.decodeStream(getAssets().open("kitten.jpg"));

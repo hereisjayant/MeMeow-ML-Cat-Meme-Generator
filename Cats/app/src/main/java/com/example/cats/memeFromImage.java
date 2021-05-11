@@ -2,20 +2,34 @@ package com.example.cats;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
 
 public class memeFromImage extends AppCompatActivity {
 
+    ProgressDialog pd;
     private TextView textView;
+
     String[] captions_angry = {"WHO UNPLUGGED THE OSCILLOSCOPE!",
             "I'm not angry, you're angry.",
             "CPSC IS NOT BETTER THAN CPEN",
@@ -61,29 +75,6 @@ public class memeFromImage extends AppCompatActivity {
             "“Sorry, I can’t, I’m busy tomorrow…”"
     };
 
-//    private String[] getStrings(String class_name ){
-//        BufferedReader reader;
-//        String[] captions = new String[10];
-//        try {
-//            String current = new java.io.File( "." ).getCanonicalPath();
-//            reader = new BufferedReader(new FileReader(
-//                    current+class_name+"_captions.txt"));
-//
-//            String line = reader.readLine();
-//            int i = 0;
-//            while (line != null) {
-//                captions[i] = line;
-//                // read next line
-//                line = reader.readLine();
-//                i++;
-//            }
-//            reader.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return captions;
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +94,6 @@ public class memeFromImage extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.meme_image);
         imageView.setImageBitmap(bitmap);
 
-        textView.setTextSize(45);
         System.out.println("?"+name+"?");
 
         if(name.equals("sleepy")){
@@ -124,5 +114,99 @@ public class memeFromImage extends AppCompatActivity {
         }
 
 //        textView.setText(strings[index]);
+        /******* Saving the meme ******/
+
+        Button saveBtn = (Button) (findViewById(R.id.save_IMG_meme_button));
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pd = new ProgressDialog(memeFromImage.this);
+                pd.setMessage("saving your image");
+                pd.show();
+                File file = saveBitMap(memeFromImage.this, textView, imageView);
+                pd.cancel();
+                if (file != null) {
+                    Log.i("TAG", "Drawing saved to the gallery!");
+                } else {
+                    Log.i("TAG", "Oops! Image could not be saved.");
+
+                }
+            }
+        });
     }
+
+    private Bitmap getBitmapFromView(TextView txt_view, ImageView image_view) {
+        System.out.println("In getBitmapFromView");
+        System.out.println("save meme button pressed");
+        //Define a bitmap with the same size as the view
+        Bitmap returnedBitmap = Bitmap.createBitmap(image_view.getRootView().getWidth(),
+                image_view.getRootView().getHeight(), Bitmap.Config.ARGB_8888);
+//        Bitmap imageBitmap = Bitmap.createBitmap(image_view.getWidth(),
+//                image_view.getHeight(), Bitmap.Config.ARGB_8888);
+
+        System.out.println("Bitmap created");
+        //Bind a canvas to it
+        Canvas canvas = new Canvas(returnedBitmap);
+        //Get the view's background
+        canvas.drawColor(Color.WHITE);
+        View v1 = image_view.getRootView();
+//        v1.setDrawingCacheEnabled(true);
+//        bitmap = canvas.drawBitmap(v1.getDrawingCache(),0,0,v1.getWidth(),v1.getHeight());
+//        v1.setDrawingCacheEnabled(false);
+        v1.draw(canvas);
+//        txt_view.draw(canvas);
+//        canvas.drawBitmap(imageBitmap, 0, txt_view.getHeight(), null);
+//        image_view.draw(canvas);
+        //return the bitmap
+        int[] topLeftTxt = new int[2];
+        int[] topLeftImg = new int[2];
+        txt_view.getLocationOnScreen(topLeftTxt);
+        image_view.getLocationOnScreen(topLeftImg);
+
+        Bitmap resizedBitmap = Bitmap.createBitmap(returnedBitmap, topLeftImg[0], topLeftTxt[1], image_view.getWidth(), image_view.getHeight() + txt_view.getHeight());
+        return resizedBitmap;
+    }
+
+    private File saveBitMap(Context context, TextView txt_view, ImageView image_view){
+        System.out.println("In saveBitMap");
+
+        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"Logicchip");
+        if (!pictureFileDir.exists()) {
+            boolean isDirectoryCreated = pictureFileDir.mkdirs();
+            if(!isDirectoryCreated)
+                Log.i("TAG", "Can't create directory to save the image");
+            return null;
+        }
+        String filename = pictureFileDir.getPath() + File.separator+ System.currentTimeMillis()+".jpg";
+        File pictureFile = new File(filename);
+        Bitmap bitmap =getBitmapFromView(txt_view, image_view);
+        try {
+            pictureFile.createNewFile();
+            FileOutputStream oStream = new FileOutputStream(pictureFile);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, oStream);
+            oStream.flush();
+            oStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.i("TAG", "There was an issue saving the image.");
+        }
+        scanGallery( context,pictureFile.getAbsolutePath());
+        return pictureFile;
+    }
+
+    private void scanGallery(Context cntx, String path) {
+        System.out.println("In scanGallery");
+
+        try {
+            MediaScannerConnection.scanFile(cntx, new String[]{path}, null, new MediaScannerConnection.OnScanCompletedListener() {
+                public void onScanCompleted(String path, Uri uri) {
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.i("TAG", "There was an issue scanning gallery.");
+        }
+    }
+
+
 }

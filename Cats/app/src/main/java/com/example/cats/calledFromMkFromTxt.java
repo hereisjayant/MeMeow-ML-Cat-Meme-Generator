@@ -200,7 +200,6 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         /******* Saving the meme ******/
 
         Button saveBtn = (Button) (findViewById(R.id.save_meme_button));
-        String finalEmotion = emotion;
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

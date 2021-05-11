@@ -11,28 +11,48 @@
     <ImageView
         android:id="@+id/meme_image"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:src="@drawable/wp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/meme_txt"
-        android:layout_width="414dp"
-        android:layout_height="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="none"
+        android:maxLines="100"
+        android:scrollHorizontally="false"
         android:background="@color/white"
         android:text="@string/memetxt"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#D64343"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/meme_image"
 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/save_IMG_meme_button"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="#1B2147"
+        android:backgroundTint="#040202"
+        app:icon="@drawable/baseline_save_black_18"
+        app:layout_constraintBottom_toTopOf="@+id/meme_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintVertical_bias="0.088" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
