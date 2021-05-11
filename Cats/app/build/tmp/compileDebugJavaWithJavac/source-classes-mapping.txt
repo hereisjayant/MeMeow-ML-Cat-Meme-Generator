@@ -1,5 +1,3 @@
-com/example/cats/ImEnteringActivity.java
- com.example.cats.ImEnteringActivity
 com/example/cats/memeFromImage.java
  com.example.cats.memeFromImage
  com.example.cats.memeFromImage$1

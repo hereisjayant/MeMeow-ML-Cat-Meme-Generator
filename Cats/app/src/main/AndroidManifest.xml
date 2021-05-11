@@ -14,7 +14,6 @@
         <activity android:name=".memeFromImage"></activity>
         <activity android:name=".imageUpload" />
         <activity android:name=".calledFromMkFromTxt" />
-        <activity android:name=".ImEnteringActivity" />
         <activity android:name=".TextEnteringActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
