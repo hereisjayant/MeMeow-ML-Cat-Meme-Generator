@@ -100,6 +100,7 @@ public class imageUpload extends AppCompatActivity {
                 ByteArrayOutputStream bs = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.JPEG,50, bs);
                 Bitmap bitmap2 = Bitmap.createScaledBitmap(bitmap,224,224,true);
+                IVPreviewImage.destroyDrawingCache();
 
                 textView.setTextSize(25);
 //                try {
