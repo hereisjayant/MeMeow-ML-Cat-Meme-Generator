@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button infoBtn = (Button) findViewById(R.id.infoBtn);
-        mkFromImBtn.setOnClickListener(new View.OnClickListener() {
+        infoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent info = new Intent(getApplicationContext(), info.class);
