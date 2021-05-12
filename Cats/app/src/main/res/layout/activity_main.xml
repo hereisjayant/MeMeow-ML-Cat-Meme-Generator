@@ -9,12 +9,28 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/infoBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="55dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="24dp"
+        app:icon="@drawable/info_icon"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mkFromImBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
         android:id="@+id/mkFromImBtn"
         style="@style/Widget.AppCompat.Button.Borderless"
-        app:iconTint="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:icon="@drawable/image_icon_100"
+        app:iconTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.853"

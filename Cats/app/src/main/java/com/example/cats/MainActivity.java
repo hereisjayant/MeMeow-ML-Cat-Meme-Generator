@@ -34,5 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(imEntering);
             }
         });
+
+        Button infoBtn = (Button) findViewById(R.id.infoBtn);
+        mkFromImBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent info = new Intent(getApplicationContext(), info.class);
+                info.putExtra("com.example.cats.meme.text",str);
+                startActivity(info);
+            }
+        });
     }
 }

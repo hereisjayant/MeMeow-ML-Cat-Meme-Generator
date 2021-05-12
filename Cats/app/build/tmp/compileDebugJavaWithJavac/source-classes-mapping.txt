@@ -11,11 +11,14 @@ com/example/cats/calledFromMkFromTxt.java
  com.example.cats.calledFromMkFromTxt
  com.example.cats.calledFromMkFromTxt$1
  com.example.cats.calledFromMkFromTxt$2
-com/example/cats/MainActivity.java
- com.example.cats.MainActivity
- com.example.cats.MainActivity$1
- com.example.cats.MainActivity$2
+com/example/cats/info.java
+ com.example.cats.info
 com/example/cats/imageUpload.java
  com.example.cats.imageUpload
  com.example.cats.imageUpload$1
  com.example.cats.imageUpload$2
+com/example/cats/MainActivity.java
+ com.example.cats.MainActivity
+ com.example.cats.MainActivity$1
+ com.example.cats.MainActivity$2
+ com.example.cats.MainActivity$3

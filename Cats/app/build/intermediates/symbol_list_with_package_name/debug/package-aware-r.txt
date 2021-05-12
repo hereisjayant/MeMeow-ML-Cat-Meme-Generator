@@ -1695,6 +1695,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable image_icon_100
 drawable image_icon_32pixels
+drawable info_icon
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1996,6 +1997,8 @@ id image
 id imageView2
 id imageView4
 id info
+id infoBtn
+id info_txt
 id inputEditText
 id invisible
 id inward
@@ -2290,6 +2293,7 @@ layout abc_tooltip
 layout activity_called_from_mk_from_txt
 layout activity_im_entering
 layout activity_image_upload
+layout activity_info
 layout activity_main
 layout activity_meme_from_image
 layout activity_text_entering

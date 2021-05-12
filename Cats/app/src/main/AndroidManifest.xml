@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cats">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,8 @@
         android:roundIcon="@mipmap/cat_img_app_icon_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-        <activity android:name=".memeFromImage"></activity>
+        <activity android:name=".info"></activity>
+        <activity android:name=".memeFromImage" />
         <activity android:name=".imageUpload" />
         <activity android:name=".calledFromMkFromTxt" />
         <activity android:name=".TextEnteringActivity" />

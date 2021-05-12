@@ -22,6 +22,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
+        <activity android:name="com.example.cats.info" />
         <activity android:name="com.example.cats.memeFromImage" />
         <activity android:name="com.example.cats.imageUpload" />
         <activity android:name="com.example.cats.calledFromMkFromTxt" />
