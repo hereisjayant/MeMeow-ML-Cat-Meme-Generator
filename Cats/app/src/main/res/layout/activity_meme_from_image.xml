@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:src="@drawable/wp"
+        android:maxHeight="600dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,18 +42,16 @@
 
     <Button
         android:id="@+id/save_IMG_meme_button"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#1B2147"
-        android:backgroundTint="#040202"
-        android:gravity="center"
-        app:icon="@drawable/baseline_save_black_18"
-        app:layout_constraintBottom_toTopOf="@+id/meme_txt"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="91dp"
+        android:layout_height="78dp"
+        app:icon="@drawable/save_icon_64"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintTop_toBottomOf="@+id/meme_image"
+        app:layout_constraintVertical_bias="0.903" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
