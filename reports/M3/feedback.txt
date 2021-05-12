@@ -1,0 +1,1 @@
+Good progress! For image classification part, you could also try some data augmentation to see if that boost the accuracy
