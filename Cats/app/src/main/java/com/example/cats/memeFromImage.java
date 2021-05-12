@@ -96,10 +96,6 @@ public class memeFromImage extends AppCompatActivity {
 
         System.out.println("?"+name+"?");
 
-        if(name.equals("sleepy")){
-            System.out.println("!!!IS: " + name);
-            textView.setText(captions_sleepy[index]);
-        }
         if(name.equals("sad")){
             System.out.println("!!!IS: " + name);
             textView.setText(captions_sad[index]);
@@ -108,10 +104,11 @@ public class memeFromImage extends AppCompatActivity {
             System.out.println("!!!IS: " + name);
             textView.setText(captions_happy[index]);
         }
-        if(name.equals("angry")){
-            System.out.println("!!!IS: " + name);
-            textView.setText(captions_angry[index]);
-        }
+
+        // display meme image
+        TextView sentiment_textView = (TextView) findViewById(R.id.meme_sentiment);
+        String sentiment = "Your caption was "+name+"!";
+        sentiment_textView.setText(sentiment);
 
 //        textView.setText(strings[index]);
         /******* Saving the meme ******/

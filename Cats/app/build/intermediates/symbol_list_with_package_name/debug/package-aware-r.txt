@@ -1658,6 +1658,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cat_icon
 drawable cat_icon2
+drawable cat_img_app_icon_background
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1692,6 +1693,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable image_icon_100
 drawable image_icon_32pixels
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -1791,7 +1793,9 @@ drawable sleepy8
 drawable sleepy9
 drawable test_custom_background
 drawable text_icon
+drawable text_icon_100
 drawable text_icon_32px
+drawable text_icon_64
 drawable text_icon_colored
 drawable text_icon_colored_32px
 drawable text_logo16px
@@ -2032,6 +2036,7 @@ id material_timepicker_view
 id material_value_index
 id memeBtn
 id meme_image
+id meme_sentiment
 id meme_txt
 id message
 id middle
@@ -2370,7 +2375,11 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+mipmap cat_img_app_icon
+mipmap cat_img_app_icon_foreground
+mipmap cat_img_app_icon_round
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description

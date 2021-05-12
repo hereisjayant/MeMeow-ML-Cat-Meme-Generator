@@ -11,9 +11,10 @@
     <Button
         android:id="@+id/mkFromImBtn"
         style="@style/Widget.AppCompat.Button.Borderless"
+        app:iconTint="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:icon="@drawable/image_icon_32pixels"
+        app:icon="@drawable/image_icon_100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.853"
@@ -24,9 +25,10 @@
     <Button
         android:id="@+id/mkFromTxtBtn"
         style="@style/Widget.AppCompat.Button.Borderless"
+        app:iconTint="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:icon="@drawable/text_icon_32px"
+        app:icon="@drawable/text_icon_100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mkFromImBtn"
         app:layout_constraintHorizontal_bias="0.335"

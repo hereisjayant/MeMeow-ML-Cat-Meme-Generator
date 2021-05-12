@@ -196,6 +196,10 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         imageView.setImageResource(id);
         System.out.println("Sentiment: " + emotion);
 
+        // display meme sentiment
+        TextView sentiment_textView = (TextView) findViewById(R.id.meme_sentiment);
+        String sentiment = "Your caption was "+emotion+"!";
+        sentiment_textView.setText(sentiment);
 
         /******* Saving the meme ******/
 
