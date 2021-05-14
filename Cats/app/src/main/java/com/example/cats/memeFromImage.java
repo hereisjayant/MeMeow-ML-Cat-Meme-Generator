@@ -107,7 +107,7 @@ public class memeFromImage extends AppCompatActivity {
 
         // display meme image
         TextView sentiment_textView = (TextView) findViewById(R.id.meme_sentiment);
-        String sentiment = "Your caption was "+name+"!";
+        String sentiment = "Your image was "+name+"!";
         sentiment_textView.setText(sentiment);
 
 //        textView.setText(strings[index]);

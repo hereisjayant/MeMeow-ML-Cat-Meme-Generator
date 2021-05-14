@@ -12,13 +12,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/cat_img_app_icon_foreground"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-        <activity android:name=".info"></activity>
-        <activity android:name=".memeFromImage" />
-        <activity android:name=".imageUpload" />
-        <activity android:name=".calledFromMkFromTxt" />
-        <activity android:name=".TextEnteringActivity" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:screenOrientation="portrait">
+        <activity android:name=".info"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".memeFromImage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".imageUpload"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".calledFromMkFromTxt"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TextEnteringActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -86,7 +86,7 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         HashMap <String, Long> vocabMap = new HashMap<>();
         try {
             AssetManager am = getApplicationContext().getAssets();
-            InputStream is = am.open("vocab.csv");
+            InputStream is = am.open("vocab_V2.csv");
 
             CSVReader reader = new CSVReader(new InputStreamReader(is));
             String[] nextLine;
@@ -101,14 +101,14 @@ public class calledFromMkFromTxt extends AppCompatActivity {
             System.out.println("OOPS error!!");
         }
 
-        // testing
-//        System.out.println("Printing the vocabMap:");
-//        System.out.println(vocabMap.get("hello"));
-//        System.out.println(vocabMap.get("fond"));
+//         testing
+        System.out.println("Printing the vocabMap:");
+        System.out.println(vocabMap.get("hello"));
+        System.out.println(vocabMap.get("fond"));
 
         // importing the ML model
-        module = Module.load(assetFilePath(this,"MemeSentiment_model.pt"));
-//        System.out.println("get the model");
+        module = Module.load(assetFilePath(this,"MemeSentiment_model_V4.pt"));
+        System.out.println("get the model");
 
         TextView txt = (TextView) findViewById(R.id.meme_txt);
         if(bundle.getString("MEME-TXT")!= null)
@@ -116,11 +116,12 @@ public class calledFromMkFromTxt extends AppCompatActivity {
             txt.setText(bundle.getString("MEME-TXT"));
         }
         String txtCaseInsensitive = txt.getText().toString().toLowerCase();
-        String userCaptionArray[] = txtCaseInsensitive.split(" ");
-//        System.out.println("Printing the user caption array:");
-//        for(String element: userCaptionArray){
-//            System.out.println(element);
-//        }
+        String userCaptionArray[] = txtCaseInsensitive.split("\\s+");
+
+        System.out.println("Printing the user caption array:");
+        for(String element: userCaptionArray){
+            System.out.println(element+",");
+        }
 
         long[] userCaptionIndices = new long[userCaptionArray.length];
 
@@ -135,25 +136,25 @@ public class calledFromMkFromTxt extends AppCompatActivity {
 //            System.out.println(userCaptionIndices[i]);
         }
 
-        long [] inputTensorShape = {userCaptionIndices.length};
+        long [] inputTensorShape = {userCaptionIndices.length, 1};
         long [] zeroArr  = {0};
         long [] zeroTensorShape = {1};
 
         Tensor inputTensor = Tensor.fromBlob(userCaptionIndices, inputTensorShape);
         Tensor zeroTensor = Tensor.fromBlob(zeroArr, zeroTensorShape);
 
-//        System.out.println("Shape of the inputTensor: "+inputTensor.shape()[0]);
-//        System.out.println("Data of the inputTensor: "+inputTensor.getDataAsLongArray()[0]+" "+inputTensor.getDataAsLongArray()[1]);
+        System.out.println("Shape of the inputTensor: "+inputTensor.shape()[0]);
+        System.out.println("Data of the inputTensor: "+inputTensor.getDataAsLongArray()[0]+" "+inputTensor.getDataAsLongArray()[1]);
+//
+        long[] inTest = inputTensor.getDataAsLongArray();
+        System.out.println("Printing the input tensor:");
+        for(long element: inTest){
+            System.out.println(element);
+        }
 
-//        long[] inTest = inputTensor.getDataAsLongArray();
-//        System.out.println("Printing the input tensor:");
-//        for(long element: inTest){
-//            System.out.println(element);
-//        }
+        System.out.println("Feeding the Model***");
 
-//        System.out.println("Feeding the Model***");
-
-        IValue outModel = module.forward(IValue.from(inputTensor),IValue.from(zeroTensor));
+        IValue outModel = module.forward(IValue.from(inputTensor));
 
 //        System.out.println();
 
@@ -176,16 +177,16 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         String emotion = "";
         switch (sentimentIndex){
             case 0:
-                emotion = "sad";
+                emotion = "happy";
             break;
             case 1:
-                emotion = "angry";
+                emotion = "sad";
             break;
             case 2:
-                emotion = "scared";
+                emotion = "angry";
             break;
             case 3:
-                emotion = "happy";
+                emotion = "scared";
             break;
         }
 

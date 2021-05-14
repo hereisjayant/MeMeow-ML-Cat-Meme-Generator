@@ -1665,6 +1665,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_text_style
 drawable happy0
 drawable happy1
 drawable happy10

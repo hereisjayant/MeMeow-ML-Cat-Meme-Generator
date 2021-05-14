@@ -8,12 +8,12 @@
         "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\text_icon_colored.png"
     },
     {
-        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_scared7.jpg.flat",
-        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\scared7.jpg"
-    },
-    {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_happy8.jpg.flat",
         "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\happy8.jpg"
+    },
+    {
+        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_scared7.jpg.flat",
+        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\scared7.jpg"
     },
     {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
@@ -28,24 +28,24 @@
         "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\happy4.png"
     },
     {
-        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_image_icon_100.png.flat",
-        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\image_icon_100.png"
-    },
-    {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_scared0.jpg.flat",
         "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\scared0.jpg"
     },
     {
-        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_image_icon_100.png.flat",
+        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-hdpi\\image_icon_100.png"
+    },
+    {
+        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_meme_from_image.xml.flat",
+        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\layout\\activity_meme_from_image.xml"
     },
     {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_meme_from_image.xml.flat",
-        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\layout\\activity_meme_from_image.xml"
+        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_angry2.jpg.flat",
@@ -618,6 +618,10 @@
     {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memeow_logo_2.png.flat",
         "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable\\memeow_logo_2.png"
+    },
+    {
+        "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_edit_text_style.xml.flat",
+        "source": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\src\\main\\res\\drawable-v24\\edit_text_style.xml"
     },
     {
         "merged": "C:\\Users\\herei\\AndroidStudioProjects\\project-team-rubeosaurus\\Cats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_sleepy4.jpg.flat",
