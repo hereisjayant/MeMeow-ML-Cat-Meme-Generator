@@ -47,7 +47,7 @@
         android:layout_marginBottom="149dp"
         android:background="@drawable/edit_text_style"
         android:backgroundTint="#987878"
-        android:text="Create Meme"
+        android:text="Create "
         android:textSize="30sp"
         app:iconTint="#3397F1" />
 
