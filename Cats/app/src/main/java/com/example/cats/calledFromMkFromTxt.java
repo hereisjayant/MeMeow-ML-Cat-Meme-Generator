@@ -92,7 +92,7 @@ public class calledFromMkFromTxt extends AppCompatActivity {
             String[] nextLine;
             System.out.println("Starting CSV reader");
             while ((nextLine = reader.readNext()) != null) {
-                // nextLine[] is an array of values from the line
+//                 nextLine[] is an array of values from the line
 //                System.out.println(nextLine[0] + " " + nextLine[1]+"till here");
 
                 vocabMap.put(nextLine[0], Long.parseLong(nextLine[1].substring(0, nextLine[1].length() - 1)));
@@ -102,9 +102,9 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         }
 
 //         testing
-        System.out.println("Printing the vocabMap:");
-        System.out.println(vocabMap.get("hello"));
-        System.out.println(vocabMap.get("fond"));
+//        System.out.println("Printing the vocabMap:");
+//        System.out.println(vocabMap.get("hello"));
+//        System.out.println(vocabMap.get("fond"));
 
         // importing the ML model
         module = Module.load(assetFilePath(this,"MemeSentiment_model_V4.pt"));
@@ -118,10 +118,10 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         String txtCaseInsensitive = txt.getText().toString().toLowerCase();
         String userCaptionArray[] = txtCaseInsensitive.split("\\s+");
 
-        System.out.println("Printing the user caption array:");
-        for(String element: userCaptionArray){
-            System.out.println(element+",");
-        }
+//        System.out.println("Printing the user caption array:");
+//        for(String element: userCaptionArray){
+//            System.out.println(element+",");
+//        }
 
         long[] userCaptionIndices = new long[userCaptionArray.length];
 
@@ -137,27 +137,19 @@ public class calledFromMkFromTxt extends AppCompatActivity {
         }
 
         long [] inputTensorShape = {userCaptionIndices.length, 1};
-        long [] zeroArr  = {0};
-        long [] zeroTensorShape = {1};
-
         Tensor inputTensor = Tensor.fromBlob(userCaptionIndices, inputTensorShape);
-        Tensor zeroTensor = Tensor.fromBlob(zeroArr, zeroTensorShape);
 
-        System.out.println("Shape of the inputTensor: "+inputTensor.shape()[0]);
-        System.out.println("Data of the inputTensor: "+inputTensor.getDataAsLongArray()[0]+" "+inputTensor.getDataAsLongArray()[1]);
+//        System.out.println("Shape of the inputTensor: "+inputTensor.shape()[0]);
+//        System.out.println("Data of the inputTensor: "+inputTensor.getDataAsLongArray()[0]+" "+inputTensor.getDataAsLongArray()[1]);
 //
-        long[] inTest = inputTensor.getDataAsLongArray();
-        System.out.println("Printing the input tensor:");
-        for(long element: inTest){
-            System.out.println(element);
-        }
+//        long[] inTest = inputTensor.getDataAsLongArray();
+//        System.out.println("Printing the input tensor:");
+//        for(long element: inTest){
+//            System.out.println(element);
+//        }
 
         System.out.println("Feeding the Model***");
-
         IValue outModel = module.forward(IValue.from(inputTensor));
-
-//        System.out.println();
-
         float[] scoresModelOut = outModel.toTensor().getDataAsFloatArray();
 
         System.out.println("The weights of the model are:");
