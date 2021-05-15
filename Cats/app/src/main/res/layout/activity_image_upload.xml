@@ -41,14 +41,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/IVPreviewImage"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/edit_text_style"
         android:layout_marginStart="143dp"
         android:layout_marginLeft="143dp"
-        android:textSize="30sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="149dp"
+        android:background="@drawable/edit_text_style"
         android:backgroundTint="#987878"
-        android:text="Make Meme"
+        android:text="Create Meme"
+        android:textSize="30sp"
         app:iconTint="#3397F1" />
 
 </RelativeLayout>
