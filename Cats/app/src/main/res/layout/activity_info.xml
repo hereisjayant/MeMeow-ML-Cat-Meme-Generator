@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,11 +10,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#0A0C19"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteY="38dp">
+        android:background="#0A0C19">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -26,24 +22,104 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/memeow_logo_2" />
 
-        <TextView
-            android:id="@+id/info_txt"
+        <ScrollView
             android:layout_width="356dp"
             android:layout_height="545dp"
-            android:background="#36797FAA"
-            android:gravity="center"
-            android:paddingLeft="20sp"
-            android:paddingTop="20sp"
-            android:paddingRight="20sp"
-            android:paddingBottom="20sp"
-            android:text="Team Rubeosaurus spent a month bringing to you MeMeow, an ML based Cat Meme Generator app for Android. The application allows you to convert the image of a cat into a meme. Our Image Classifying model recognizes the sentiments of the cat in order to bring to you an interesting meme. But not just that, we also allow you to make a meme from text (works well for people without cats). Our Text Sentiment Analysis model classifies your text into one of the four sentiments - happy,sad,angry and scared and creates a Cat meme based on that. Either way, you get cat memes and have fun."
-            android:textColor="#4CAF50"
-            android:textSize="21sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.287" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/info_txt6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#36797FAA"
+                    android:gravity="center"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="0sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="0sp"
+                    android:text="Team Rubeosaurus spent a month bringing to you MeMeow, an ML based Cat Meme Generator app for Android."
+                    android:textColor="#4CAF50"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/info_txt7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#36797FAA"
+                    android:gravity="center"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="0sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="0sp"
+                    android:text="The application allows you to convert the image of a cat into a meme."
+                    android:textColor="#4CAF50"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/info_txt8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#36797FAA"
+                    android:gravity="center"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="0sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="0sp"
+                    android:text="Our Image Classifying model recognizes the sentiments of the cat in order to bring to you an interesting meme."
+                    android:textColor="#4CAF50"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/info_txt9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#36797FAA"
+                    android:gravity="center"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="0sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="0sp"
+                    android:text="But not just that, we also allow you to make a meme from text (works well for people without cats)."
+                    android:textColor="#4CAF50"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/info_txt5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#36797FAA"
+                    android:gravity="center"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="0sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="0sp"
+                    android:text="Our Text Sentiment Analysis model classifies your text into one of the four sentiments - happy,sad,angry and scared and creates a Cat meme based on that."
+                    android:textColor="#4CAF50"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/info_txt10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#36797FAA"
+                    android:gravity="center"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="0sp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="0sp"
+                    android:text="Either way, you get cat memes and have fun."
+                    android:textColor="#4CAF50"
+                    android:textSize="21sp" />
+
+            </LinearLayout>
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

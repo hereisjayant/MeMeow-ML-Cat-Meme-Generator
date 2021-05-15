@@ -1999,7 +1999,12 @@ id imageView2
 id imageView4
 id info
 id infoBtn
-id info_txt
+id info_txt10
+id info_txt5
+id info_txt6
+id info_txt7
+id info_txt8
+id info_txt9
 id inputEditText
 id invisible
 id inward
