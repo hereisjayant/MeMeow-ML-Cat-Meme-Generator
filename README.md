@@ -38,7 +38,7 @@ If the user wishes to create a meme from text, they can click on the icon in the
 |<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143440.png" width="300">|<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143639.png" width="300">|
 
  	         
-                               Figure 6. Text entering page	 	  Figure 7. Meme output page
+ 
 
 
 ## DATA FLOW BETWEEN SYSTEM COMPONENTS
