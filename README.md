@@ -1,4 +1,4 @@
-# MeMeow 
+<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/memow_logo.png">
 
 Team Rubeosaurus brings you MeMeow, an ML-based Cat Meme Generator app for Android. The application allows you to convert the image of a cat into a meme. Our Image Classifying model recognizes the sentiments of the cat in order to bring you an interesting meme. But not just that, we also allow you to make a meme from text (works well for people without cats). Our Text Sentiment Analysis model classifies your text into one of four sentiments - happy, sad, angry, and scared - and creates a cat meme based on that. Either way, you get cat memes and are guaranteed peak entertainment!
 
@@ -9,15 +9,20 @@ As the user embarks on their journey with MeMeow, they are greeted by our aesthe
 (Clicking on the button on the bottom right corner will redirect the user to an information page, see Figure 2.)
 
 
-   	                
-                    Figure 1. Main page		            Figure 2. Info page
+|Main Page|
+|---------------|
+|<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143417.png" width="400">|
+
+
 
 ## Making a Meme From an Image:
 If the user wishes to create a meme from an image, they can click on the icon in the bottom right corner of the main page (see Figure 1); this will redirect them to the image upload page (see Figure 3). The user can then press the ‘Select Image’ button on the image upload page to choose an image from their gallery or Google Drive. The selected image will then be displayed on the image upload page to preview. A sample image input is shown below (see Figure 4). 
 
 
-                       
-    Figure 3. Image upload page       Figure 4. Preview of selected image	 Figure 5. Meme output page
+
+|Image upload page | Meme output page
+|---------------|-----------|
+|<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143542.png" width="300">|<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143553.png" width="300">|
 
 
 Once the image is ready, the user can press the ‘Create’ button on the image upload page (see Figure 4). This enables the image classification model on the backend to analyze the input image and classify it into one of two categories: ‘happy’ or ‘sad. The output meme will then be displayed on the meme output page after the image input is paired with a matching caption (see Figure 5). Finally, the user can press the save icon on the bottom right corner of the meme output page (see Figure 5) to download the meme and save it to their gallery.
@@ -25,6 +30,11 @@ Once the image is ready, the user can press the ‘Create’ button on the image
 ## Making a Meme From Text:
 If the user wishes to create a meme from text, they can click on the icon in the bottom left corner of the main page (see Figure 1); this will redirect them to the text entering page (see Figure 6). The user can then enter text (that will be matched with an image) and press the ‘Create’ button on the text entering page (see Figure 6). This triggers the sentiment analysis model on the backend to classify the text into one of four categories: ‘happy’, ‘sad’, ‘angry’, or ‘scared’. As before, the output meme will then be displayed on the meme output page after the input text is paired with a matching image (see Figure 7). The user may then press the save icon on the bottom right corner of the meme output page (see Figure 7) to save the meme to their gallery.
 
+
+
+|Text entering page | Meme output page
+|---------------|-----------|
+|<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143440.png" width="300">|<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/Screenshot_20210523_143639.png" width="300">|
 
  	         
                                Figure 6. Text entering page	 	  Figure 7. Meme output page
@@ -35,7 +45,10 @@ If the user wishes to create a meme from text, they can click on the icon in the
 Our project consists of three components: an image classifier machine learning model, a sentiment analysis machine learning model, and an app development module that integrates all other subparts of the system together. See Figure 8 for a visual representation of the data flow.
 
 The inputs to both our image classification model and sentiment analysis are the datasets we used to train and test our model. For our image classifier, the dataset comes in the form of images of happy and sad cats. On the other hand, the dataset for our text classifier involves text categorized into six categories: fear, surprise, love, joy, sadness, and anger. The outputs of both our image classifier and text classifier are the models we optimized after experimenting with different parameters like learning rate scheduler, step size, etc. These models are then used as inputs to our app module , along with the image or text provided by the user. After pairing the image/text with text/image from our database, the final output of the app module is a cat meme.
- Figure 8. Diagram of data flow
+ 
+ |Diagram of data flow|
+ |---------------------|
+ |<img src="https://github.com/hereisjayant/MeMeow-ML-Cat-Meme-Generator/blob/main/Repo%20Resources/data_flow.png">|
 
 
 ## DESCRIPTION OF SYSTEM COMPONENTS
