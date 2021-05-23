@@ -1,4 +1,4 @@
-package com.example.cats;
+package com.example.MeMeow;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,10 +18,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
 
