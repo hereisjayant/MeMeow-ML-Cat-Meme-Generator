@@ -250,7 +250,7 @@ public class calledFromMkFromTxt extends AppCompatActivity {
     private File saveBitMap(Context context, TextView txt_view, ImageView image_view){
         System.out.println("In saveBitMap");
 
-        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"Logicchip");
+        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"MeMeow");
         if (!pictureFileDir.exists()) {
             boolean isDirectoryCreated = pictureFileDir.mkdirs();
             if(!isDirectoryCreated)

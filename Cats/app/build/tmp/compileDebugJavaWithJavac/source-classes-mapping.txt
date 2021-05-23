@@ -1,9 +1,16 @@
+com/example/cats/MainActivity.java
+ com.example.cats.MainActivity
+ com.example.cats.MainActivity$1
+ com.example.cats.MainActivity$2
+ com.example.cats.MainActivity$3
+com/example/cats/BuildConfig.java
+ com.example.cats.BuildConfig
+com/example/cats/info.java
+ com.example.cats.info
 com/example/cats/memeFromImage.java
  com.example.cats.memeFromImage
  com.example.cats.memeFromImage$1
  com.example.cats.memeFromImage$2
-com/example/cats/BuildConfig.java
- com.example.cats.BuildConfig
 com/example/cats/TextEnteringActivity.java
  com.example.cats.TextEnteringActivity
  com.example.cats.TextEnteringActivity$1
@@ -11,13 +18,6 @@ com/example/cats/calledFromMkFromTxt.java
  com.example.cats.calledFromMkFromTxt
  com.example.cats.calledFromMkFromTxt$1
  com.example.cats.calledFromMkFromTxt$2
-com/example/cats/info.java
- com.example.cats.info
-com/example/cats/MainActivity.java
- com.example.cats.MainActivity
- com.example.cats.MainActivity$1
- com.example.cats.MainActivity$2
- com.example.cats.MainActivity$3
 com/example/cats/imageUpload.java
  com.example.cats.imageUpload
  com.example.cats.imageUpload$1

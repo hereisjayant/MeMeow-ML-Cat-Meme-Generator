@@ -41,10 +41,10 @@ public class memeFromImage extends AppCompatActivity {
             "WHAT DO YOU MEAN YOU DIDN'T SAVE A DUPLICATE!",
             "YOU CANNOT JUSTIFY MEMORY LEAKS!"
     };
-    String[] captions_happy = {"23:59--ASSIGNMENT SUBMITTED!!!",
-            "CPSC prof says remaining labs are optional",
+    String[] captions_happy = {"*chicken nuggs shaped like dinosaurs*  23 year old me: ",
+            "Me: *preparing the same meal for the 1258th time*  my cat:",
             "Me seeing my code finally compiles",
-            "Me looking at the webwork perfect",
+            "Me: *shakes treat bag* My cat from across the room:",
             "This is my super happy face",
             "Cheer up! Weekend incoming",
             "when I turn to the right page on my first try",
@@ -54,14 +54,14 @@ public class memeFromImage extends AppCompatActivity {
 };
     String[] captions_sad = {"My ram when I open the 113th chrome tab",
             "Profs: “Please don’t be overwhelmed” Me: ok",
-            "When you actually have to do hardware in CPEN",
-            "When you see CPSC majors playing outside",
-            "Checking accuracy after working 35 hrs: -23%",
+            "Worst she can say is no  Her: Eww...",
+            "The songs in your playlist that you always skip but never delete:",
+            "8 year old me planning how to survive alone after being yelled at by my parents",
             "Group discussion: *Everyone’s on mute*",
             "Prof: guys pls... can you hear me...",
-            "I’m not crying, you’re crying!",
+            "Mr. FBI agent watching me get on incognito mode for the 15th time today",
             "When your “cheat day” turns into “cheat life”",
-            "UBC: “Hope this email finds you well” Me:"
+            "University: “Hope this email finds you well” Me:"
     };
     String[] captions_sleepy = {"*Me after pulling 2 all-nighters because CPEN*",
             "“sLeEp dEpRiVaTiOn iS mY pAsSiOn”",
@@ -167,7 +167,7 @@ public class memeFromImage extends AppCompatActivity {
     private File saveBitMap(Context context, TextView txt_view, ImageView image_view){
         System.out.println("In saveBitMap");
 
-        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"Logicchip");
+        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"MeMeow");
         if (!pictureFileDir.exists()) {
             boolean isDirectoryCreated = pictureFileDir.mkdirs();
             if(!isDirectoryCreated)

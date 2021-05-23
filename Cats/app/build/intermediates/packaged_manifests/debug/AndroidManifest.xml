@@ -21,7 +21,6 @@
         android:roundIcon="@mipmap/cat_img_app_icon_foreground"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
         <activity
             android:name="com.example.cats.info"
