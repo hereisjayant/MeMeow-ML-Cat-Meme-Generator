@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.cats",
+  "applicationId": "com.rubeosaurus.cats",
   "variantName": "processDebugResources",
   "elements": [
     {

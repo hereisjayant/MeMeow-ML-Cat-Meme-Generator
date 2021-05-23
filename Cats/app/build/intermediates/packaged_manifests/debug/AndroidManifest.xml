@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cats"
+    package="com.rubeosaurus.cats"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -23,22 +23,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
         <activity
-            android:name="com.example.cats.info"
+            android:name="com.rubeosaurus.MeMeow.info"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.cats.memeFromImage"
+            android:name="com.rubeosaurus.MeMeow.memeFromImage"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.cats.imageUpload"
+            android:name="com.rubeosaurus.MeMeow.imageUpload"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.cats.calledFromMkFromTxt"
+            android:name="com.rubeosaurus.MeMeow.calledFromMkFromTxt"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.cats.TextEnteringActivity"
+            android:name="com.rubeosaurus.MeMeow.TextEnteringActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.cats.MainActivity"
+            android:name="com.rubeosaurus.MeMeow.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

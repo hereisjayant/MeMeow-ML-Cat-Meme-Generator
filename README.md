@@ -1,16 +1,7 @@
 # Project-team-rubeosaurus:
 ## Original Proposal
 ### Abstract
-Cat Meme Generator!! Our application will allow you to turn your cat (or any other cat)
-into a meme. It has two ML components. First, a classifier to classify the cat image as
-'happy', 'sad' , 'sleepy' etc. And second, sentiment analysis of the meme text. The
-application would be built for the Android environment. The user will be prompted for an
-input. This will work both ways. The input can be an image. In that case, a meme will be
-created by classifying the image and then choosing from a bunch of meme text we
-already have based on the classification. But the user can also input a String. In that
-case, we'll carry out sentiment analysis of the text and choose a Cat Image we already
-have that would go well with the sentiments of the text. In both cases, the user gets their
-cat meme.
+Team Rubeosaurus spent a month bringing to you MeMeow, an ML-based Cat Meme Generator app for Android. The application allows you to convert the image of a cat into a meme. Our Image Classifying model recognizes the sentiments of the cat in order to bring you an interesting meme. But not just that, we also allow you to make a meme from text (works well for people without cats). Our Text Sentiment Analysis model classifies your text into one of four sentiments - happy, sad, angry, and scared - and creates a cat meme based on that. Either way, you get cat memes and are guaranteed peak entertainment!
 
 ### ML models
 
@@ -53,7 +44,7 @@ that allows everyone to work in pairs on the four components :
    2. Text Classifier
    3. Generating meme output
    4. Creating the user interface.
-   
+
 ### Milestones
 
 - Milestone 1 : Getting decent results for the Image classifier + Creating a basic app using
@@ -71,6 +62,3 @@ some meme output that'll make us happy.
 
 ● If the Android App does not seem to integrate well with the PyTorch model, we
 can create a web-app.
-
-
-

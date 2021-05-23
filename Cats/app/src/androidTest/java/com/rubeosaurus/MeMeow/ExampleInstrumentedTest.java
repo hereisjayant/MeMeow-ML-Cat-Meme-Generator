@@ -1,4 +1,4 @@
-package com.example.MeMeow;
+package com.rubeosaurus.MeMeow;
 
 import android.content.Context;
 

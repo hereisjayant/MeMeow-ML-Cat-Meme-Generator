@@ -1,24 +1,24 @@
-com/example/cats/MainActivity.java
- com.example.cats.MainActivity
- com.example.cats.MainActivity$1
- com.example.cats.MainActivity$2
- com.example.cats.MainActivity$3
-com/example/cats/BuildConfig.java
- com.example.cats.BuildConfig
-com/example/cats/info.java
- com.example.cats.info
-com/example/cats/memeFromImage.java
- com.example.cats.memeFromImage
- com.example.cats.memeFromImage$1
- com.example.cats.memeFromImage$2
-com/example/cats/TextEnteringActivity.java
- com.example.cats.TextEnteringActivity
- com.example.cats.TextEnteringActivity$1
-com/example/cats/calledFromMkFromTxt.java
- com.example.cats.calledFromMkFromTxt
- com.example.cats.calledFromMkFromTxt$1
- com.example.cats.calledFromMkFromTxt$2
-com/example/cats/imageUpload.java
- com.example.cats.imageUpload
- com.example.cats.imageUpload$1
- com.example.cats.imageUpload$2
+com/rubeosaurus/MeMeow/info.java
+ com.rubeosaurus.MeMeow.info
+com/rubeosaurus/MeMeow/memeFromImage.java
+ com.rubeosaurus.MeMeow.memeFromImage
+ com.rubeosaurus.MeMeow.memeFromImage$1
+ com.rubeosaurus.MeMeow.memeFromImage$2
+com/rubeosaurus/MeMeow/BuildConfig.java
+ com.rubeosaurus.MeMeow.BuildConfig
+com/rubeosaurus/MeMeow/TextEnteringActivity.java
+ com.rubeosaurus.MeMeow.TextEnteringActivity
+ com.rubeosaurus.MeMeow.TextEnteringActivity$1
+com/rubeosaurus/MeMeow/MainActivity.java
+ com.rubeosaurus.MeMeow.MainActivity
+ com.rubeosaurus.MeMeow.MainActivity$1
+ com.rubeosaurus.MeMeow.MainActivity$2
+ com.rubeosaurus.MeMeow.MainActivity$3
+com/rubeosaurus/MeMeow/calledFromMkFromTxt.java
+ com.rubeosaurus.MeMeow.calledFromMkFromTxt
+ com.rubeosaurus.MeMeow.calledFromMkFromTxt$1
+ com.rubeosaurus.MeMeow.calledFromMkFromTxt$2
+com/rubeosaurus/MeMeow/imageUpload.java
+ com.rubeosaurus.MeMeow.imageUpload
+ com.rubeosaurus.MeMeow.imageUpload$1
+ com.rubeosaurus.MeMeow.imageUpload$2

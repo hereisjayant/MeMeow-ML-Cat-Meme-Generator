@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cats">
+    package="com.rubeosaurus.MeMeow">
 
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -14,17 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
         android:screenOrientation="portrait">
-        <activity android:name=".info"
+        <activity android:name="com.rubeosaurus.MeMeow.info"
             android:screenOrientation="portrait"/>
-        <activity android:name=".memeFromImage"
+        <activity android:name="com.rubeosaurus.MeMeow.memeFromImage"
             android:screenOrientation="portrait"/>
-        <activity android:name=".imageUpload"
+        <activity android:name="com.rubeosaurus.MeMeow.imageUpload"
             android:screenOrientation="portrait"/>
-        <activity android:name=".calledFromMkFromTxt"
+        <activity android:name="com.rubeosaurus.MeMeow.calledFromMkFromTxt"
             android:screenOrientation="portrait"/>
-        <activity android:name=".TextEnteringActivity"
+        <activity android:name="com.rubeosaurus.MeMeow.TextEnteringActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
+        <activity android:name="com.rubeosaurus.MeMeow.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
